@@ -6,6 +6,8 @@ management:
       enabled: true
     env:
       enabled: true
+  server:
+    port: 8080
   endpoint:
     shutdown:
       enabled: true
@@ -17,9 +19,15 @@ management:
       exposure:
         include: "*"
 
-
-
 info:
   app:
     name: hello-actuator
     company: yh
+logging:
+  level:
+    hello.controller: debug
+
+server:
+  tomcat:
+    mbeanregistry:
+      enabled: true
